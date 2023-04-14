@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.heading{
+   text-transform: uppercase;
+   text-align: center;
+   margin: 20px;
+}
+.back {
+    /* background: tomato; */
+    background: radial-gradient( rgb(227, 221, 50),rgb(6, 136, 250));
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    /* background: white; */
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.icon {
+    text-align: center;
+    align-items: center;
+    margin: auto 20px;
+}
+
+.mid-con {
+    background: #ffffff;
+    border-radius: 10px;
+    height: 480px;
+    padding-right: 5px;
+    /* color: #fff; */
+}
+
+.week {
+    margin: 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+.days{
+    width: 1rem;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-column-gap: 23px;
+    grid-row-gap: 10px;
+    margin: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+    animation:height 2s ease-in-out;
+    animation-duration: 3s;
+}
+.day{
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    border-radius: 50%;
+    padding:10px;
+    text-align: center;
+    box-shadow: 1px 1px 3px 1px rgb(174, 174, 174);
+}
+.arrow{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.current{
+    margin-left: 15px;
+}
+.perday{
+    /* background: linear-gradient(rgb(255, 165, 80),rgb(43, 226, 58)); */
+    color:aliceblue;
+    background:linear-gradient(rgb(47, 0, 255),rgb(255, 71, 234));
+    font-weight: 800;
+}
+.seleced-day{
+    background:rgb(0, 94, 255);
+    color:aliceblue
+}
+.sunday{
+    outline: 2px solid rgb(245, 114, 114);
+    
+}
+.inactive{
+    background: rgb(246, 239, 239);
+    color:rgb(124, 158, 189);
+    /* cursor:not-allowed; */
+}
+
+.sel{
+    outline: 0;
+    border-width: 0px;
+    font-size: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100px;
+    background-color: transparent;
+    
+}
+.num{
+    outline: 0;
+    border-width: 0px;
+    background-color: transparent;
+    font-size: 20px;
+    width: 80px;
+    margin-right:80px;
+    
+}
+.selected-day-name{
+    background-color: rgba(224, 29, 246, 0.782);
+    color: white;
+    padding: 3px;
+    border-radius: 10px;
+    font-weight: bold;
+}
