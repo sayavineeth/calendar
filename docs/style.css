@@ -12,6 +12,7 @@
     /* background: tomato; */
     background: radial-gradient( rgb(227, 221, 50),rgb(6, 136, 250));
     height: 100vh;
+    width: 100vw;
     display: grid;
     place-items: center;
 }
@@ -35,13 +36,15 @@
 .mid-con {
     background: #ffffff;
     border-radius: 10px;
-    height: 480px;
+    height: auto;
     padding-right: 5px;
     /* color: #fff; */
+    user-select: none;
+    transition: height 1s ease-in-out;
 }
 
 .week {
-    margin: 10px;
+    margin: 5px;
     list-style-type: none;
     display: flex;
     justify-content: space-around;
@@ -119,4 +122,64 @@
     padding: 3px;
     border-radius: 10px;
     font-weight: bold;
+}
+.day-item{
+    border: 0;
+    cursor: pointer;
+    
+
+}
+@media (max-width:400px){
+    .mid-con {
+        background: #ffffff;
+        border-radius: 10px;
+        height: 480px;
+       
+        padding-right: 5px;
+        /* color: #fff; */
+
+
+    }
+    
+.icon {
+    text-align: center;
+    align-items: center;
+    margin: auto 20px;
+}
+.days{
+    width: 1rem;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-column-gap: 17px;
+    grid-row-gap: 10px;
+    margin: 10px;
+    /* margin-left: 20px; */
+    cursor: pointer;
+    animation:height 2s ease-in-out;
+    animation-duration: 3s;
+}
+
+.arrow{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.container {
+    /* background: white; */
+    width: 330px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    padding: 20px;
+}
+.num{
+    outline: 0;
+    border-width: 0px;
+    background-color: transparent;
+    font-size: 20px;
+    width: 80px;
+    margin-right:30px;
+    
+}
 }
