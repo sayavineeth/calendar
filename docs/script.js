@@ -52,6 +52,11 @@ function calender(curYear,curMonth){
             item.classList.add("inactive")
             item.onclick=()=>{
                 currentMonth-=1
+                if (currentMonth<0){
+                   currentMonth+=12
+                }
+                
+                    
                 calender(curYear,currentMonth)
                 select.value=currentMonth
 
@@ -65,6 +70,10 @@ function calender(curYear,curMonth){
             item.classList.add("inactive")
             item.onclick=()=>{
                 currentMonth+=1
+                if (currentMonth>11)
+                {
+                    currentMonth-=12
+                }
                 calender(curYear,currentMonth)
                 select.value=currentMonth
             }
@@ -114,13 +123,13 @@ function calender(curYear,curMonth){
     
     
     const MonthInput=(e)=>{
-        curYear=e.target.value
+        curYear=parseInt(e.target.value)
         calender(curYear,currentMonth)
     }
     num.addEventListener('input',MonthInput)
     select.onchange=(e)=>{
-        curMonth=e.target.value
-    calender(curYear,curMonth)
+        currentMonth=parseInt(e.target.value)
+    calender(curYear,currentMonth)
 }
 left.onclick=()=>{
     currentMonth-=1
